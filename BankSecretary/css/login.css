@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* line 2, ../scss/login.scss */
+* {
+  font-size: 16px;
+  font-family: "微软雅黑 !important";
+}
+
+/* line 8, ../scss/login.scss */
+.login .log-name, .login .log-pwd {
+  width: 300px;
+}
+/* line 11, ../scss/login.scss */
+.login .log-verify {
+  width: 190px;
+}
+
+/* line 17, ../scss/login.scss */
+.log-btn {
+  width: 60px;
+  height: 130px;
+  color: white !important;
+  min-width: 0 !important;
+  font-size: 20px !important;
+  margin-top: 7px !important;
+}
+
+/* line 25, ../scss/login.scss */
+.log-verify-pic {
+  width: 100px;
+  height: 30px;
+  top: 8px;
+  position: relative;
+}
+
+/* line 32, ../scss/login.scss */
+#main-con {
+  position: relative;
+  width: 420px;
+  height: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 90px;
+}
+
+/* line 40, ../scss/login.scss */
+.log-icon {
+  font-size: 100px !important;
+  color: #aaa;
+  margin-bottom: 20px;
+}

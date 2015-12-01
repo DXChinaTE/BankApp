@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="zh-cn" Name="voiceCommandSet_zh-cn">
+    <CommandPrefix>网上银行</CommandPrefix>
+    <Example>Control alarm, temperature, light and others</Example>
+   
+    <Command Name="showproducts">
+      <Example>查询理财产品</Example>
+      <ListenFor>查询理财产品</ListenFor>
+      <Feedback>查询中，请稍后 </Feedback>
+      <VoiceCommandService Target="voiceservice"/>
+    </Command>
+
+
+  </CommandSet>
+</VoiceCommands>

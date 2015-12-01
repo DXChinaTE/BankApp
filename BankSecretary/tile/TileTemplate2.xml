@@ -1,0 +1,10 @@
+﻿<tile>
+  <visual>
+    <binding template="TileWide310x150Image">
+      <image id="1" src="ms-appx:///Assets/tile/tile3101502.png" alt="alt text"/>
+    </binding>
+    <binding template="TileSquare310x310Image">
+      <image id="1" src="ms-appx:///Assets/tile/tile3103102.png" alt="alt text"/>
+    </binding>
+  </visual>
+</tile>

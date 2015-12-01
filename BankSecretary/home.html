@@ -1,0 +1,1366 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+	<title>网上银行</title>
+	<link rel="stylesheet" type="text/css" href="css/base.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ui-light.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> 
+    <script type="text/javascript">
+        function register() {
+            var object = window.registerComponent;
+
+            if (object) {
+                object.registerCommand();
+                object.registerBackgroundTask();
+            } else {
+               
+            }
+        }
+    </script>  
+</head>
+
+
+<body style="background:#eee;">
+
+
+<!--作为图片预加载，解决闪烁问题//-->
+<img class="force-preload-pic" src="images/l-netbank.png">
+<img class="force-preload-pic" src="images/l-netbank-s.png">
+<img class="force-preload-pic" src="images/l-wh.png">
+<img class="force-preload-pic" src="images/l-wh-s.png">
+<img class="force-preload-pic" src="images/l-money.png">
+<img class="force-preload-pic" src="images/l-money-s.png">
+<img class="force-preload-pic" src="images/l-mszx.png">
+<img class="force-preload-pic" src="images/l-mszx-s.png">
+<img class="force-preload-pic" src="images/l-setting.png">
+<img class="force-preload-pic" src="images/l-setting-s.png">
+	
+
+
+<div id="fuck-u-pc" class="cl" >
+
+
+<div id="left-menu" class="sidebar-leftmenu fl col-2" style="min-width:30px;" >
+
+	<div class="top-info">
+		
+		<div id="hasloged-part" class="away">
+
+		<div style="position:relative; width:155px; margin:0 auto;">
+			<p style="text-align:left;"><span style="margin-left:0; margin-right:5px; position:relative; left:5px;">张</span>先生</p>
+			<p>欢迎使用网上银行</p>
+			<div style="text-align:left;">
+				<button class="win-button" id="exit-loginn" style="background:#6d84b8; color:white; font-size:20px; width:100px;  margin-top:30px; min-width:0; min-height:0;">退&emsp;出</button>
+			</div>
+		</div>
+
+
+			
+		</div>
+
+		<div id="login-part" >
+			
+			<p>
+				您好<a href="#login-win" id="loginnn" style="display:block; text-align:center; margin-top:15px;">请登录</a>
+			</p>
+
+		</div>
+
+		<div id="narrow-log" style="display:none;">
+			
+			<img src="images/i-user.png" style="width:25px;">
+
+		</div>
+
+
+	</div>
+
+	<ul id="pc-left-menu">
+
+		<li class="sidebar-border-blue li-active">
+			<a id="btn-wsyh" href="#wsyh" class="amainmenu lblue">
+				<img class="netbank" src="images/l-netbank-s.png"> </span><span style="position:relative; top:-3px;">网上银行</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="#tzlc" class="amainmenu">
+				<img class="money" src="images/l-money.png"></i><span style="position:relative; top:-3px;">投资理财</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="#wh" class="amainmenu">
+				<img class="wh" src="images/l-wh.png"><span style="position:relative; top:-3px;">外&emsp;&emsp;汇</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="#mszx" class="amainmenu">
+				<img class="mszx" src="images/l-mszx.png"><span style="position:relative; top:-3px;">银行资讯</span>
+			</a>
+
+		</li>
+		<li>
+			<a href="#sz" class="amainmenu">
+				<img class="setting" src="images/l-setting.png"><span style="position:relative; top:-3px;">网银设置</span>
+			</a>
+
+		</li>
+
+
+
+
+		
+	</ul>
+
+	
+</div>
+
+<div id="main-con" class="col-8 fl" style="min-width:0 !important;">
+
+<div id="main-con-con" class="fl" style="width:100%; margin-top:0px; margin-left:0;">
+	
+<div id="page-empty" class="myapppage away">
+	
+
+</div>
+
+	<div id="page-login" class="myapppage away" style="margin-left:5px;">
+		
+		<div style="width:400px; position:relative; margin:0 auto;">
+	
+		<div style="margin-top:250px;" class="cl">
+
+		<p id="userhint" style="color:red; font-size:12px; margin-bottom:15px; height:12px;">
+			
+
+
+		</p>
+
+
+		<div class="i-contain">
+			<div class="l-left">
+				<img src="images/medal.png">
+			</div>
+			<div class="l-right">
+				<input id="username" placeholder="登录名或卡号">
+			</div>
+		</div>
+
+		<div class="i-contain">
+			<div class="l-left">
+				<img src="images/lock.png">
+			</div>
+			<div class="l-right">
+				<input type="password" id="pass" placeholder="登录密码">
+			</div>
+		</div>
+
+		<div style="margin-top:20px; font-size:18px; width:400px;">	
+		
+			<button id="login" class="win-button" style=" color:white; height:45px; width:160px; background:#1f4c76;">登录</button>
+			<button id="bioclick" class="win-button" style="height:45px; width:220px; color:white; margin-left:10px; background:#20905f;">绑定Windows生物识别认证</button>
+		
+		</div>
+
+		<div class="fl" style="margin-top:26px; font-size:14px;">
+			
+			<a href="#" style="display:inline-block; color:#333; ">忘记密码</a>
+			<span>&emsp;|&emsp;</span>
+			<a href="#" style="display:inline-block; color:#333; ">自动注册</a>
+		</div>
+
+	
+</div>
+
+
+</div>
+
+	</div>
+
+
+	<div id="page-wsyh" class="myapppage">
+		
+		<ul class="new-list cl">
+		
+		<a href="#tologin">
+			<img src="images/i-zh.png">
+			<p>账户</p>
+		</a>
+
+		<a id="zz-btn" href="#zz">
+			<img src="images/i-zz.png">
+			<p>转账</p>
+		</a>
+
+		<a href="#tologin">
+			<img src="images/i-kht.png">
+			<p>跨行通</p>
+		</a>
+
+		<a href="#tologin">
+			<img src="images/i-jf.png">
+			<p>缴费</p>
+		</a>
+
+		<a href="#tologin">
+			<img src="images/i-xyk.png">
+			<p>信用卡</p>
+		</a>
+
+		<a href="#tologin">
+			<img src="images/i-dk.png">
+			<p>贷款</p>
+		</a>
+
+		<a href="#">
+			<img src="images/i-gd.png">
+			<p>更多</p>
+		</a>
+	</ul>
+
+	</div>
+
+
+
+	<div id="page-setting" class="myapppage away">
+		
+		<p class="blueh">用户信息</p>
+		
+		<div class="set-line cl">
+			
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">个人信息</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					包括姓名、客户号、手机号码、地址和E-mail等信息
+				</div>
+			</div>
+
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">登录名</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					登录名作为您登录网银的标识之一，建议您设置更安全的登录名。
+				</div>
+			</div>
+
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">登录密码</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					安全性高的密码可以使账号更安全。建议您定期更换登录密码。
+				</div>
+			</div>
+
+		</div>	
+
+		<p class="blueh">账户安全</p>
+
+
+		<div class="set-line  cl">
+			
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">短信验证码</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					短信验证码是网银设置交易的辅助安全手段之一，推荐您开通。
+				</div>
+			</div>
+
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">动态令牌校准</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					可避免动态令牌时钟偏移的问题，确保正常使用。
+				</div>
+			</div>
+
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">证书更新</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					您可以查看您证书是否到期，在到期时间内可以进行证书更新。
+				</div>
+			</div>
+
+		</div>	
+
+		<div class="set-line  cl">
+			
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">安全问题</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					请根据需要设定您的安全问题，您最多可以设置3个安全问题。
+				</div>
+			</div>
+
+		</div>
+
+
+		<p class="blueh">权限设置</p>
+
+
+		<div class="set-line cl">
+			
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">交易权限</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					支持客户暂停一段时间的网银服务。
+				</div>
+			</div>
+
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">网银限额</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					限额以客户为单位，包含对外限额、网上支付、缴费等业务的日累计限额。
+				</div>
+			</div>
+
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">证书更新</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					您可以查看您证书是否到期，在到期时间内可以进行证书更新。
+				</div>
+			</div>
+
+		</div>	
+
+
+		<p class="blueh">暂停/注销</p>
+
+		<div class="set-line cl">
+			
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">暂停网银服务</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					支持客户暂停一段时间的网银服务。
+				</div>
+			</div>
+
+
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">注销网银服务</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					注销网银后您将不能再登录网上银行。
+				</div>
+			</div>
+
+		</div>	
+		<p class="blueh">日志查询</p>
+
+		<div class="set-line cl">
+			
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">网银日志查询</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					可查询一定期限内登录/退出网银、设置维护、转账结算、投资理财等交易的操作日志。
+				</div>
+			</div>
+
+		</div>	
+
+		<p class="blueh">网银助手</p>
+
+		<div class="set-line cl">
+			
+			<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">修复</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					包括姓名、客户号、手机号码、地址和E-mail等信息
+				</div>
+			</div>
+
+				<div class="set-container">
+				<div class="cl h">
+					<div class="fl a">检测</div>
+					<div class="fr b"> <img src="images/i-setting.png">设置</div>
+				</div>
+				<div class="con">
+					登录名作为您登录网银的标识之一，建议您设置更安全的登录名
+				</div>
+			</div>
+
+		</div>	
+		
+		
+	</div>
+
+	
+	<div id="page-sub-zz" class="myapppage away">
+		
+
+		<div class="navtitle" id="backfirstzz" style="background:#6e65be; color:white; display:block; position:fixed; z-index:999;">
+			
+				<a id="tri" href="#cycz" class="sub" style="color:white; width：100%； display:block; heiht:100%;"><i class="icon-angle-left"></i>
+				<span>转账</span>
+				</a>
+			
+		</div>
+
+		<ul class="new-list cl" style="margin-top:60px;">
+		
+		<a id="btnbtn-khzz" href="#khzz">
+			<img src="images/i-khzz.png">
+			<p>跨行转账</p>
+		</a>
+
+		<a id="btnbtn-thzz" href="#thzz">
+			<img src="images/i-bhzz.png">
+			<p>本行转账</p>
+		</a>
+
+		<a href="#ttologin">
+			<img src="images/i-bhtmzz.png">
+			<p >本行同名转账</p>
+		</a>
+
+		<a href="#ttologin">
+			<img src="images/i-yyzz.png">
+			<p>预约转账</p>
+		</a>
+
+		<a href="#ttologin">
+			<img src="images/i-plzz.png">
+			<p>批量转账</p>
+		</a>
+
+		<a href="#ttologin">
+			<img src="images/i-skrgl.png">
+			<p>收款人管理</p>
+		</a>
+
+		<a href="#ttologin">
+			<img src="images/i-jwhk.png">
+			<p>境外汇款</p>
+		</a>
+
+		<a href="#ttologin">
+			<img src="images/i-zzjscx.png">
+			<p>转账结束查询</p>
+		</a>
+
+		<a href="#">
+			<img src="images/i-gd.png">
+			<p>更多</p>
+		</a>
+	</ul>
+	</div>
+
+
+	<div id="page-tzlc" class="myapppage away cl" style="padding:0 0 0 15px;">
+	
+		<div class="tzlc-ele fl" style="margin-bottom:0px; ">
+			<p class="h"><img src="images/moneybag.png"><span class="big">理财</span><span class="more">更多</span></p>
+			
+
+			<table class="hovered">              
+                <tr>
+                    <td class="sf" style="font-size:12px;">非凡资产管理35天增利第203期</td>
+                    <td><span class="bignum forange">4.95%</span></td>
+                    <td class="txtr"><button class="win-button blue">购买</button></td>
+                </tr>
+                <tr>
+                    <td class="sf" style="font-size:12px;">非凡资产管理35天增利第202期</td>
+                    <td><span class="bignum forange">4.95%</span></td>
+                    <td class="txtr"><button class="win-button" disabled>售罄</button></td>
+                </tr>
+                <tr>
+                    <td class="sf txtl" style="font-size:12px;">“金钥匙·安心得利”2015年第314期</td>
+                    <td><span class="bignum fteal">4.30%</span></td>
+                    <td class="txtr"><button class="win-button blue ">购买</button></td>
+                </tr>
+                <tr>
+                    <td class="sf txtl" style="font-size:12px;">灵通快线个人超短期高净值客户专属7天增利人民币理财产品</td>
+                    <td><span class="bignum fteal">2.95%</span></td>
+                    <td class="txtr"><button class="win-button blue ">购买</button></td>
+                </tr>                
+			</table>
+
+
+		</div>
+
+		<div class="tzlc-ele fl" style="margin-bottom:0px; ">
+			
+			<p class="h"><img src="images/moneybag.png"><span class="big">基金</span><span class="more">更多</span></p>
+			<table class="hovered condensed">
+				<tr>
+					<td class="sf">景顺长城品质投资混合&nbsp;净值&nbsp;1.8540</td>
+					<td><p>日涨幅</p><p><span class="smallnum forange">+3.24%</span></p></td>
+					<td><p>日涨幅</p><p><span class="smallnum forange">+7.31%</span></p></td>
+					<td  class="txtr"><button class="win-button blue">购买</button></td>
+				</tr>
+				<tr>
+					<td class="sf">富国宏观策略灵活配置混合&nbsp;净值&nbsp;1.6660</td>
+					<td><p>日涨幅</p><p><span class="smallnum forange">+4.63%</span></p></td>
+					<td><p>日涨幅</p><p><span class="smallnum forange">+13.93%</span></p></td>
+					<td  class="txtr"><button class="win-button blue">购买</button></td>
+				</tr>
+				<tr>
+					<td class="sf">民生加银策略精选净值&nbsp;0.9490</td>
+					<td><p>日涨幅</p><p><span class="smallnum forange">+3.03%</span></p></td>
+					<td><p>日涨幅</p><p><span class="smallnum forange">+8.09%</span></p></td>
+					<td  class="txtr"><button class="win-button blue">购买</button></td>
+				</tr>
+			</table>
+		</div>
+		
+
+		<div class="cl">
+			
+
+		
+		<div class="tzlc-ele fl" style="margin-top:0px;">
+
+			<p class="h"><img src="images/moneybag.png"><span class="big">贵金属</span><span class="more">更多</span></p>
+			<p class="cl" style="margin-top:5px;"><span class="fl">黄金9999</span><span class="fr" style="margin:0;"><button class="win-button blue">买入</button></span></p>
+			
+			<div class="cl">
+				<div class="fl" style="margin-top:10px; margin-right:0; margin-left:0; color:#279a2d;">
+
+					<span class="smallnum" style="margin-right:5px;">233.855</span><span ><img src="images/die.png" style="width:20px; margin-right:5px; "></span><span class="smallnum">-1.15(-0.49)</span> 
+				</div>
+				<div class="fr cl" style="margin:0; font-size:12px;">
+					
+					<div class="fl">
+						<p>今开</p>
+						<p class="fteal">235.00</p>
+					</div>
+
+					<div class="fl">
+						<p>昨收</p>
+						<p class="fteal">235.00</p>
+					</div>
+
+					<div class="fl">
+						<p>最高</p>
+						<p class="fteal">235.00</p>
+					</div>
+
+					<div class="fl">
+						<p>昨收</p>
+						<p class="fteal">235.00</p>
+					</div>
+
+				</div>
+			</div>
+
+			<p style="margin-bottom:5px;">分时图</p>
+			<div>
+
+				<img src="images/sxt.png" style="width:100%; max-height:208px;">
+
+			</div>
+
+
+		</div>
+
+
+		<div class="tzlc-ele fl" style="margin-top:0px;">
+			
+			<p class="h"><img src="images/moneybag.png"><span class="big">网银贵金属</span><span class="more">更多</span></p>
+			<p class="cl" style="margin-top:5px;"><span class="fl">网银贵金属</span><span class="fr" style="margin:0;"><button class="win-button blue">签约</button></span></p>
+			<p style="margin-bottom:5px;"><span class="bignum forange">0.1</span>克起投 持金有收益</p>
+			<div>
+				<img src="images/kxt.png" style="width:100%; max-height:240px;">
+			</div>
+		</div>
+
+		</div>
+
+		<div class="tzlc-ele fl cl" style="width:100%; margin-top:0px;">
+
+		<p class="h"><img src="images/moneybag.png"><span class="big">其他产品</span></p>
+		<ul class="new-list cl" >
+		
+		<a href="#" style="margin-top:10px;">
+			<img src="images/i-zq.png">
+			<p>证券</p>
+		</a>
+
+
+		<a href="#" style="margin-top:10px;">
+			<img src="images/i-gz.png">
+			<p>国债</p>
+		</a>
+
+		<a href="#" style="margin-top:10px;">
+			<img src="images/i-jjzxqy.png">
+			<p style="font-size:13px;">基金直销签约</p>
+		</a>
+
+		<a href="#" style="margin-top:10px;">
+			<img src="images/i-ygztc.png">
+			<p >银高直通车</p>
+		</a>
+
+		<a href="#" style="margin-top:10px;">
+			<img src="images/i-yqztc.png">
+			<p >银期直通车</p>
+		</a>
+		</ul>
+		</div>
+
+	</div>
+
+	<div id="page-wh" class="away myapppage" style="padding:5px 0 0 0; ">
+		
+		
+		<style type="text/css">
+
+		.striped td,.striped th{
+
+			padding: 15px !important;
+		}
+
+		</style>
+	
+
+		<ul class="new-list cl" style="margin-top:20px; margin-bottom:80px;">
+		
+		<a href="#" style="margin-top:10px; margin-right:15% !important;">
+			<img src="images/i-xsh.png" >
+			<p>销售汇</p>
+		</a>
+
+		<a href="#" style="margin-top:10px; margin-right:15% !important;">
+			<img src="images/i-whmm.png" >
+			<p>外汇买卖</p>
+		</a>
+
+		<a href="#" style="margin-top:10px; margin-right:15% !important;">
+			<img src="images/i-jwhk.png">
+			<p >境外汇款</p>
+		</a>
+
+		<a href="#" style="margin-top:10px; margin-right:0 !important;">
+			<img src="images/i-czh.png">
+			<p>钞转汇</p>
+		</a>
+
+		</ul>
+
+		<div style="width:90%; padding-left:5%">
+
+		<p style="padding:10px; font-size:18px;"> <span><b style="font-weight:bolder;">今日汇率215.56(交易单位:100)</b></span><span style="font-size:12px; float:right; font-weight:bold; ">汇率更新时间：2015/09/30 15:00:00</span></p>
+			<table class="striped" style="z-index:99; width:100%;">
+			
+			<tr class="thead">
+				<th>币种</th>
+				<th>交易单位</th>
+				<th>中间价</th>
+				<th>现汇买入价</th>
+				<th>现钞买入价</th>
+				<th>卖出价</th>
+			</tr>
+			<tr>
+				<td>美元(USD)</td>
+				<td>100</td>
+				<td>635.5</td>
+				<td>634.5</td>
+				<td>629.32</td>
+				<td>666.66</td>
+			</tr>
+			<tr>
+				<td>港币(HKD)</td>
+				<td>100</td>
+				<td>635.5</td>
+				<td>634.5</td>
+				<td>529.32</td>
+				<td>666.66</td>
+			</tr>
+			<tr>
+				<td>欧元(EUR)</td>
+				<td>100</td>
+				<td>235.5</td>
+				<td>234.5</td>
+				<td>229.32</td>
+				<td>466.66</td>
+			</tr>
+			<tr>
+				<td>英镑(GBP)</td>
+				<td>100</td>
+				<td>5.5</td>
+				<td>4.5</td>
+				<td>9.32</td>
+				<td>6.66</td>
+			</tr>
+			<tr>
+				<td>日元(JPY)</td>
+				<td>100</td>
+				<td>35.5</td>
+				<td>34.5</td>
+				<td>29.32</td>
+				<td>66.66</td>
+			</tr>
+			
+		</table>
+		</div>
+
+
+	</div>
+
+<div id="page-mszx" class="myapppage away">
+	
+	<div class="navtitle cl"  style="background:#6e65be; color:white; display:block; position:fixed; z-index:999;">							
+				<a id="t-wygg" href="#" class="sub lbblue" style="float:left; color:white; width:180px; display:block; padding-top:20px; padding-bottom:10px;  text-align:center; border-bottom:3px solid #6e65be;">
+					网银公告
+				</a>
+			
+		</div>
+
+
+
+		<div id="wygg" class="inside cl" style="padding:25px; padding-right:0; margin-top:60px;">
+			
+			<div class="gg">
+				
+				<span class="s-h florange borange">
+					最新公告
+				</span>
+				<p class="h">
+                    关于调整周末及法定节假日期间小额支付系统普通贷记业务限额的通告
+				</p>
+				<p class="con">
+                    根据中国人民银行通知，2015年12月11日起，周末（周六、周日）及法定节假日中国人民银行小额支付系统普通贷记业务的限额调整为50万元/笔。2015年12月11日起，您可通过我行柜面......
+				</p>
+				<p class="time">
+					2015-11-11
+				</p>
+			</div>
+			<div class="gg">
+				
+				<span class="s-h florange borange">
+					最新公告
+				</span>
+				<p class="h">
+                    个人大额存单发行公告
+				</p>
+				<p class="con">
+                    根据中国人民银行《大额存单管理暂行办法》（中国人民银行公告[2015]第13号），我行于2015年6月15日发行个人大额存单，首期为6个月和1年期两款，利率分别为......
+				</p>
+				<p class="time">
+					2015-10-11
+				</p>
+			</div>
+			<div class="gg">
+				
+				<span class="s-h florange borange">
+					最新公告
+				</span>
+				<p class="h">
+                    关于销售国家开发银行2015年第二十二期金融债券的通告
+				</p>
+				<p class="con">					
+                    我行将于2015年10月28-11月3日（双休日除外），通过电子银行渠道和境内营业网点面向个人和非金融机构客户，销售国家开发银行2015年第二十二期金融债券，发行额度不超过5亿元......
+				</p>
+				<p class="time">
+					2015-10-06
+				</p>
+			</div>
+			<div class="gg">
+				
+				<span class="s-h florange borange">
+					最新公告
+				</span>
+				<p class="h">
+					博士后科研工作站录取2015年博士后申请人员的公告
+				</p>
+				<p class="con">
+				按照我行博士后工作站工作计划，2015年第七期博士后笔试、面试及体检工作已全部结束，工作站现将组织录取人员统一办理进站手续。现将录取博士后名单及相关事项通知......
+				</p>
+				<p class="time">
+					2015-09-28
+				</p>
+			</div>
+
+
+			<div class="gg">
+				
+				<span class="s-h fgreen bgreen">
+					通&emsp;知
+				</span>
+				<p class="h">
+					关于对小区金融平台服务费和金融顾问服务费价格进行公示的通知
+				</p>
+				<p class="con">
+				尊敬的客户：<br>
+　　根据《商业银行服务价格管理办法》的规定，我行对拟新增的小区金融平台服务费和金融顾问服务费价格进行公示，公示内容如......
+				</p>
+				<p class="time">
+					2015-09-16
+				</p>
+			</div>
+
+			
+			<div class="gg">
+				
+				<span class="s-h flteal bteal">
+					公&emsp;告
+				</span>
+				<p class="h">
+					关于借记卡贵宾服务积分相关事项的公告
+				</p>
+				<p class="con">
+					尊敬的客户：<br>
+　　我行计划于6月26日起对借记卡贵宾服务积分相关内容进行调整，调整内容如下：
+　　1、借记卡贵宾客户预约机场贵宾服务和医疗贵宾服务支持通用积分扣减，扣减金额和方式保持不变；其他借记卡贵宾服务......
+				</p>
+				<p class="time">
+					2015-08-29
+				</p>
+			</div>
+			<div class="gg">
+				
+				<span class="s-h flteal bteal">
+					公&emsp;告
+				</span>
+				<p class="h">
+                    关于对个人电子银行服务价格进行公示的通知
+				</p>
+				<p class="con">
+                    根据《商业银行服务价格管理办法》的规定，我行对拟调整的个人电子银行服务价格进行公示，内容如下：......
+				</p>
+				<p class="time">
+					2015-01-30
+				</p>
+			</div>
+		
+
+		</div>
+
+	<div id="yhhd" class="inside cl" style="padding:1%; padding-right:0; padding-left:25px; margin-top:60px;">
+		
+		
+		<div class="pubu-row row-1">
+
+		
+
+		</div>
+
+		<div class="pubu-row row-2"> 
+		
+
+		</div>
+
+		
+		<div class="pubu-row row-3">		
+			
+		</div>
+
+		
+
+	</div>
+
+
+</div>
+	
+
+	<!--page-zz//-->
+
+	<div id="page-zz" class="myapppage away">
+		<div class="navtitle backzz" id="" style="background:#6e65be; color:white; display:block; position:fixed; z-index:999;">
+			
+				<a id="tri" href="#cycz" class="sub" style="color:white; width：100%； display:block; heiht:100%;"><i class="icon-angle-left"></i>
+				<span>跨行转账</span>
+				</a>
+			
+		</div>
+
+
+		<div class="inside" style="margin:30px; margin-top:75px;">
+			
+			<p class="area-title">
+				付款账号
+			</p>
+
+				<div class="fill-area" style="border:none;">
+					<div class="flatbox f">
+						<select class="win-dropdown" style="width:100%;"><option>6000&nbsp;0000&nbsp;0000&nbsp;0000&nbsp;</option></select>
+					</div>
+					<div class="flatbox" style="color:#333;">
+						余额&nbsp;￥20,000.00
+					</div>
+				</div>
+			
+			<p class="area-title" style="margin-bottom:15px !important;">
+				选择汇路
+			</p>
+
+			<div class="fill-area" style="border:none;">
+				
+				<div class="flatbox r" style="">
+					<input class="win-radio" type="radio" name="selhl"  style="margin-right:20px; "><label style="font-weight:bold;">网银互联</label>
+				</div>
+
+				<div class="flatbox r" >
+					<input class="win-radio" type="radio" name="selhl" style="margin-right:20px;font-weight:bold;"><label style="font-weight:bold;">小额实时</label>
+				</div>
+
+				<div class="flatbox r">
+					<input class="win-radio" type="radio" name="selhl" style="margin-right:20px;font-weight:bold;"><label style="font-weight:bold;">大额实时</label>
+				</div>
+			
+			</div>
+
+			<p class="area-title">
+				转账金额
+			</p>
+
+			<div class="fill-area" style="border:none;">
+
+				<div class="flatbox f">
+						
+					<input class="win-textbox" id="trans-cash"/>
+
+				</div>
+
+				<div class="flatbox" id="showCashChn" style="color:red;">
+					
+				</div>
+			</div>
+
+
+
+			<p class="area-title">
+				收款人姓名
+			</p>
+			<div class="fill-area" style="border:none;">
+				
+				<div class="flatbox f">
+						
+					<input class="win-textbox" value=""/>
+
+				</div>
+				
+
+				<div class="flatbox">
+					
+					<button class="win-button" style="background:#6e65be; color:white;">选择收款人</button>
+
+				</div>
+
+			</div>
+
+
+			
+			
+			<p class="area-title">
+				收款方银行
+			</p>
+
+			<div class="fill-area" style="border:none;">
+				
+				<div class="flatbox f">
+					<select class="win-dropdown" id="wbank"><option>中国建设银行</option><option>中国人民银行</option><option>招商银行</option></select> 
+				</div>
+
+			</div>
+
+			<p class="area-title">
+				收款方账号
+			</p>
+
+
+			<div class="fill-area" style="border:none;">
+			
+				<div class="flatbox f" >
+						
+					<input class="win-textbox" value="6000&nbsp;0000&nbsp;0000&nbsp;1111&nbsp;"/>
+
+				</div>
+
+			</div>
+
+
+			<p class="area-title">
+				附言
+			</p>
+
+			<div class="fill-area" style="border:none;">
+				<div class="flatbox f" >
+					<input class="win-textbox" value="网银转账">
+				</div>
+
+			<div class="flatbox" style="max-width:150px;">
+				
+				<div class="flatbox" >
+					<input class="win-radio" type="radio" ><label>短信通知收款人</label>
+				</div>
+
+			</div>
+
+		
+			<div style="margin-top:15px;">
+				
+				<button id="" class="win-button disabled zz-next-step" style="width:94%;" disabled="true">下一步</button>
+			</div>
+			
+			
+			</div>
+
+			
+
+		</div>
+
+		
+	</div>
+
+
+
+	<div id="page-zz-th" class="myapppage away">
+		<div class="navtitle backzz"  style="background:#6e65be; color:white; display:block; position:fixed; z-index:999;">
+			
+				<a id="tri" href="#cycz" class="sub" style="color:white; width：100%； display:block; heiht:100%;"><i class="icon-angle-left"></i>
+				<span>本行转账</span>
+				</a>
+			
+		</div>
+
+
+		<div class="inside" style="margin:30px; margin-top:75px;">
+			
+			<p class="area-title">
+				付款账号
+			</p>
+
+				<div class="fill-area" style="border:none;">
+					<div class="flatbox f">
+						<select class="win-dropdown" style="width:100%;"><option>6000&nbsp;0000&nbsp;0000&nbsp;0000&nbsp;</option></select>
+					</div>
+					<div class="flatbox" style="color:#333;">
+						余额&nbsp;￥20,000.00
+					</div>
+				</div>
+			
+	
+
+			<p class="area-title">
+				转账金额
+			</p>
+
+			<div class="fill-area" style="border:none;">
+
+				<div class="flatbox f">
+					<input class="win-textbox" id="trans-cash-th"/>
+				</div>
+
+				<div class="flatbox" id="showCashChn-th" style="color:red;">
+					
+				</div>
+
+			</div>
+
+
+
+			<p class="area-title">
+				收款人姓名
+			</p>
+			<div class="fill-area" style="border:none;">
+				
+				<div class="flatbox f">
+						
+					<input class="win-textbox" value=""/>
+
+				</div>
+				
+
+				<div class="flatbox">
+					
+					<button class="win-button" style="background:#6e65be; color:white;">选择收款人</button>
+
+				</div>
+
+			</div>
+
+			<p class="area-title">
+				收款方账号
+			</p>
+
+
+			<div class="fill-area" style="border:none;">
+			
+				<div class="flatbox f" >
+						
+					<input class="win-textbox" value="6000&nbsp;0000&nbsp;0000&nbsp;1111&nbsp;"/>
+
+				</div>
+
+			</div>
+
+
+			<p class="area-title">
+				附言
+			</p>
+
+			<div class="fill-area" style="border:none;">
+				<div class="flatbox f" >
+					<input class="win-textbox" value="网银转账">
+				</div>
+
+			<div class="flatbox" style="max-width:150px;">
+				
+				<div class="flatbox" >
+					<input class="win-radio" type="radio" ><label>短信通知收款人</label>
+				</div>
+
+			</div>
+
+		
+			<div style="margin-top:15px;">
+				
+				<button class="win-button disabled zz-next-step" style="width:94%;" disabled="true">下一步</button>
+			</div>
+			
+			
+			</div>
+
+			
+
+		</div>
+
+		
+	</div>
+
+
+	<!--page-zz end 转账支线页面//-->
+
+
+	<div id="page-zz-2" class="myapppage away" >	
+
+
+	<div class="navtitle" id="backfirststep" style="background:#6e65be; color:white; display:block; position:fixed; z-index:999;">
+			
+				<a id="tri" href="#cycz" class="sub" style="color:white; width：100%； display:block; heiht:100%;"><i class="icon-angle-left"></i>
+				<span id="backwho">跨行转账</span>
+				</a>
+			
+		</div>
+
+		<div class="inside cl" style="margin:30px;">
+
+			<p class="area-title fblue" style="font-size:22px !important; margin-bottom:20px !important; margin-top:60px;">
+				转账信息
+			</p>
+
+
+			<div class="zzinfo" style="max-width:828px !important; margin-bottom:100px;">
+			
+			<div class="cl" style="margin-bottom:0;">
+				<div style="float:left; ">付款账号：6000&nbsp;0000&nbsp;0000&nbsp;0000&emsp;</div> 
+				<div style="float:left; min-width:210px; margin-left:92px;">日常消费卡&emsp;￥20,000.00</div>
+			</div>
+
+			<div class="cl" style="margin-bottom:0;">
+				<div style="float:left;">收款账号：6000&nbsp;0000&nbsp;0000&nbsp;1111&emsp;</div>
+				<div style="float:left; min-width:210px; margin-left:92px;"><span id="whichbank"></span></div>
+			</div>
+
+
+			<div>付款金额：<span class="fred" id="zzmoney">1000.00</span>元人民币&emsp;<span id="zzmoney-c">壹仟元整</span></div>
+			<div>手&nbsp;续&nbsp;费&nbsp;<span style="margin-right:2px;"></span>：<span class="fred" id="zz-sxf">2.00</span>元</div>
+			<div id="zz-wyhl-zz">网银汇路：网银互联</div>
+			<div>附&emsp;&emsp;言：网银转账</div>
+			</div>
+
+
+			<p class="area-title fblue" style=" font-size:22px !important; margin-bottom:20px !important;">
+				认证方式
+			</p>
+			
+			<div class="fill-area fl cl" style="border:none; margin:0; margin-bottom:10px !important;">
+				
+
+				<div class="flatbox r" style="margin-right:40px;">
+					<input id="winrz" class="win-radio" type="radio" name="selhl" style="margin-right:20px;"><label style="font-weight:bold;">Windows生物识别认证</label>
+				</div>
+
+				<div class="flatbox r">
+					<input class="win-radio" type="radio" name="selhl" style="margin-right:20px;"><label style="font-weight:bold;">短信验证码</label>
+				</div>
+
+				<div class="flatbox r" style="margin-right:180px;">
+					<input class="win-radio" type="radio" name="selhl" style="margin-right:20px;"><label style="font-weight:bold;">U宝</label>
+				</div>
+
+				<div class="flatbox r">
+					<input class="win-radio" type="radio" name="selhl" style="margin-right:20px;"><label style="font-weight:bold;">动态令牌</label>
+				</div>
+			
+			</div>
+
+			
+			
+		</div>
+
+			<div style="margin-left:30px;">
+				<button id="returnbackstep" class="win-button" style="background:#444; color:white; width:45%; max-width:400px; margin-right:5%; margin-bottom:15px;" >上一步</button>
+				<button id="confirmmm" class="win-button btn-confirm-ok" style="background:#6e65be; width:45%; color:white; max-width:400px !important;">确认信息并付款</button>
+			</div>
+	</div>
+
+
+	<style type="text/css">
+
+		.userchoose-btn{
+
+			background: #329651;
+			color:white;
+			width:100%;
+			margin-bottom: 10px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+
+		}
+
+	</style>
+
+
+	<div id="page-choose-users" class="myapppage away">
+		
+		<div style="width:400px; position:relative; margin:0 auto;">
+	
+		<div style="margin-top:250px;" class="cl">
+
+			
+		<div class="i-contain">
+			<div class="l-left">
+				<img src="images/medal.png">
+			</div>
+			<div class="l-right">
+				<input id="username-again" placeholder="登录名或卡号">
+			</div>
+		</div>
+
+		<button id="bioagain"  class="win-button" style="height:45px; width:100%; color:white; margin-bottom:20px;  background:#20905f;">Windows生物识别认证</button>
+
+			<a href="#login-win-qz" id="use-another-to-login" style="cursor:pointer; display:block;  color:#666; font-size:16px;">
+				
+				其他账户登录
+
+			</a>
+
+	
+		</div>
+
+
+		</div>
+
+	</div>
+
+
+	</div>
+
+</div>
+
+<a id="khzz-btn" href="#khzzok" class="away">
+	
+
+</a>
+
+<a id="thzz-btn" href="#thzzok" class="away">
+	
+
+</a>
+
+<div class="box">
+    <div  class="confirm-complete-win" data-win-control="WinJS.UI.ContentDialog" data-win-options="{
+             title: ''       
+        }">
+
+        <div style="width:250px; border:none;">
+        
+        	<img src="images/zzcg.png" style="width:150px; position:relative; display:block; margin:0 auto;">
+        	<button id="returntoindex" class="win-button" style="background:#20905f; color:white; width:90%; margin-left:5%; margin-top:20px;">返回首页</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="box">
+    <div  class="exceed-500-win" data-win-control="WinJS.UI.ContentDialog" data-win-options="{
+             title: '',
+
+        }">
+
+        <div style="width:448px; height:136px; border:none;">
+        	
+        	<p style="font-size:18px; margin-bottom:10px;"><span>密码</span> <span id="pass-error" class="fr" style="color:red; margin:0;"></span></p>
+
+        	<input id="jymm" type="password" class="win-textbox" style="margin-bottom:15px; width:100%;" placeholder="请输入交易密码"/>
+        	<button id="anotherbio" class="win-button" style="height:45px; width:100%; color:white;  background:#20905f;" onclick="exceed_500();">Windows生物识别认证</button>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="box">
+    <div  class="con-win-1" data-win-control="WinJS.UI.ContentDialog" data-win-options="{
+             title: '',
+
+        }">
+
+        <div id="con-win-con"  style="text-align:center; font-weight:bold; border:none; position:relative;  height:140px; line-height:140px;">
+        	
+        	<span class="fred">Windows生物验证失败</span>不存在此绑定，请用其他账户登录
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+</div>
+</body>
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/base.min.js"></script>
+<script type="text/javascript" src="js/ui.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</html>

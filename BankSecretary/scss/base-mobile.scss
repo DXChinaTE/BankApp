@@ -1,0 +1,141 @@
+@charset "utf-8";
+@import "compass/css3";
+//--------字体颜色
+$fblue:#3b83c0;
+$fteal:#00b5ad;
+$fred:#d95c5c;
+$fgreen:#5bbd72;
+$forange:#e07b53;
+$fpurple:#564f8a;
+//--------------
+
+.no-border{
+	border:none !important;
+}
+.mr0{
+	margin-right: 0 !important;
+}
+.mt0{
+	margin-top: 0 !important;
+}
+.mb0{
+	margin-bottom: 0 !important;
+}
+.ml0{
+	margin-left: 0 !important;
+}
+.col-1{
+	width:10%;
+}
+.col-2{
+	width:20%;
+}
+.col-25{
+	width:25%;
+}
+.col-3{
+	width:30%;
+}
+.col-33{
+	width:33%;
+}
+.col-4{
+	width:40%;
+}
+.col-5{
+	width:50%;
+}
+.col-6{
+	width:60%;
+}
+.col-7{
+	width:70%;
+}
+.col-8{
+	width:80%;
+}
+.col-9{
+	width:90%;
+}
+.col-10{
+	width:100%;
+}
+.cl{
+	&:after{ 
+		content:".";
+		display:block;
+		height:0;
+		clear:both;
+		visibility:hidden;
+	}
+}
+.fl{ 
+	float:left;
+	margin:10px;
+	&:after{ 
+		content:".";
+		display:block;
+		height:0;
+		clear:both;
+		visibility:hidden;
+	}
+
+}
+.fr{
+	float:right;
+	margin:10px;
+	&:after{ 
+		content:".";
+		display:block;
+		height:0;
+		clear:both;
+		visibility:hidden;
+	}
+}
+.flatbox{
+	display: inline-block;
+}
+
+.txtcenter{ 
+	text-align:center;
+}
+i{ 
+	margin:7px;
+}
+.fblack{
+	color:black !important;
+}
+.fblue{ 
+	color:$fblue !important;
+}
+.fpurple{ 
+	color:$fpurple !important;
+}
+.fred{ 
+	color:$fred !important;
+}
+.fgreen{
+	color:$fgreen !important;
+}
+.forange{
+	color:$forange !important;
+}
+.fteal{
+	color:$fteal !important;
+}
+html {font-size:15px}
+@media screen and (min-width:480px) and (max-width:639px) {
+    html {
+        font-size: 15px
+    }
+}
+
+
+.vs-hidden{
+	visibility: hidden !important;
+}
+.vs-away{
+	position: absolute !important;
+	top:-9999px !important;
+	left:-9999px !important;
+}

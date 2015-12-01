@@ -1,0 +1,44 @@
+@charset "utf-8";
+*{ 
+	font-size:16px;
+	font-family: "微软雅黑 !important";
+}
+.login{ 
+
+	.log-name,.log-pwd{ 
+		width:300px;
+	}
+	.log-verify{ 
+		width:190px;
+	}
+
+}
+
+.log-btn{ 
+		width:60px;
+		height:130px;
+		color:white !important;
+		min-width:0 !important;
+		font-size: 20px !important;
+		margin-top: 7px !important;
+}
+.log-verify-pic{ 
+
+	width:100px;
+	height:30px;
+	top: 8px;
+	position: relative;
+}
+#main-con{ 
+	position: relative;
+	width:420px;
+	height:350px;
+	margin:0 auto;
+	padding: 20px;
+	margin-top: 90px;
+}
+.log-icon{ 
+	font-size:100px !important; 
+	color:#aaa;
+	margin-bottom:20px;
+}

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="3715c35a-53e6-46e6-9d51-29c5797987ae" Version="1.0.4.0" Publisher="CN=v-yihtan" />
+  <mp:PhoneIdentity PhoneProductId="3715c35a-53e6-46e6-9d51-29c5797987ae" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>BankSecretary</DisplayName>
+    <PublisherDisplayName>v-yihtan</PublisherDisplayName>
+    <Logo>images\Magnet\storelogo-sdk.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <uap:VisualElements DisplayName="网上银行" Description="BankSecretary" BackgroundColor="transparent" Square150x150Logo="images\Magnet\icon150.png" Square44x44Logo="images\Magnet\icon44.png">
+        <uap:DefaultTile Wide310x150Logo="images\Magnet\icon310150.png" Square310x310Logo="images\Magnet\icon310.png" Square71x71Logo="images\Magnet\icon71.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="images\Magnet\icon620 300.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.appService" StartPage="js/voiceCommandService.js">
+          <uap:AppService Name="voiceservice" />
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
